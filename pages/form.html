@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
-	<title>HTML5 Boilerplate</title>
+	<title>Form - HTML5 Boilerplate</title>
 	<link REL="icon" HREF="/images/fav.png">
 
 	<meta name="author" content="Harris Christiansen">
@@ -37,7 +37,7 @@
 
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Boilerplate</a>
+		<a class="navbar-brand" href="/">Boilerplate</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -49,7 +49,7 @@
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="/pages/table.html">Table</a>
-						<a class="dropdown-item" href="/pages/form.html">Form</a>
+						<a class="dropdown-item active" href="#">Form</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="/pages/about.html">About</a>
 					</div>
@@ -63,14 +63,22 @@
 	</nav>
 	
 	<!-- Content -->
-	<main role="main" class="container">
-		<div class="container theme-showcase" role="main">
-			<div class="jumbotron">
-				<h1>HTML5 Boilerplate</h1>
-				<p>Hello World!</p>
-			</div>
+    <main role="main" class="container">
+		<div class="panel panel-default">
+			<form method="post" action="/form.html" class="panel-body validate">
+				<label for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Name" class="form-control" data-bvalidator="required" data-bvalidator-msg="Name Required">
+				<br>
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" placeholder="Email" class="form-control" data-bvalidator="required,email" data-bvalidator-msg="Email Required">
+				<br>
+				<label for="date">Date</label>
+				<input type="text" name="date" id="date" placeholder="Date" class="form-control datepicker" data-bvalidator="required,date[yyyy-mm-dd]" data-bvalidator-msg="Date Required">
+				<br>
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</form>
 		</div>
-	</main>
+    </main>
 
 	<!-- ========== Javascript ========== -->
 	
