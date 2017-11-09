@@ -6,11 +6,23 @@
 
 
 $(document).ready(function() { 
-	$(".sortable").tablesorter(); 
+	$(".sortable").tablesorter();
+
+	$('.validate').bValidator();
+
+	$(".datepicker").datepicker({
+		dateFormat: 'yy-mm-dd',
+	});
+
+	$("#alert").click(function(evt) {
+		displayMessage("Example alert!");
+	});
 });
 
-$('.validate').bValidator();
-
-$(".datepicker").datepicker({
-	dateFormat: 'yy-mm-dd',
-});
+function displayMessage(msg, isFailure=false) {
+	if (isFailure) {
+		$('<div class="alert alert-danger" role="alert">'+msg+"</div>").appendTo('#msgs').delay(2200).slideUp(300);
+	} else {
+		$('<div class="alert alert-success" role="alert">'+msg+"</div>").appendTo('#msgs').delay(2200).slideUp(300);
+	}
+}
