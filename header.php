@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
-	<title>Table - HTML5 Boilerplate</title>
+	<title><? if (strlen($title) > 1) { echo $title." - "; } ?>HTML5 Boilerplate</title>
 	<link REL="icon" HREF="/images/fav.png">
 
 	<meta name="author" content="Harris Christiansen">
@@ -48,10 +48,10 @@
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item active" href="#">Table</a>
-						<a class="dropdown-item" href="/pages/form.html">Form</a>
+						<a class="dropdown-item <? if ($title =="Table") { echo "active"; } ?>" href="/table">Table</a>
+						<a class="dropdown-item <? if ($title =="Form") { echo "active"; } ?>" href="/form">Form</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="/pages/about.html">About</a>
+						<a class="dropdown-item <? if ($title =="Actions") { echo "active"; } ?>" href="/actions">Actions</a>
 					</div>
 				</li>
 			</ul>
@@ -61,79 +61,3 @@
 			</form>
 		</div>
 	</nav>
-
-	<!-- Content -->
-	<main role="main" class="container">
-		<div id="msgs"></div>
-		<div class="table-responsive">
-			<table class="table table-striped sortable">
-				<thead>
-					<tr>
-						<th>#</th>
-						<th>Header</th>
-						<th>Header</th>
-						<th>Header</th>
-						<th>Header</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>1,001</td>
-						<td>Lorem</td>
-						<td>ipsum</td>
-						<td>dolor</td>
-						<td>sit</td>
-					</tr>
-					<tr>
-						<td>1,002</td>
-						<td>amet</td>
-						<td>consectetur</td>
-						<td>adipiscing</td>
-						<td>elit</td>
-					</tr>
-					<tr>
-						<td>1,003</td>
-						<td>Integer</td>
-						<td>nec</td>
-						<td>odio</td>
-						<td>Praesent</td>
-					</tr>
-					<tr>
-						<td>1,003</td>
-						<td>libero</td>
-						<td>Sed</td>
-						<td>cursus</td>
-						<td>ante</td>
-					</tr>
-					<tr>
-						<td>1,004</td>
-						<td>dapibus</td>
-						<td>diam</td>
-						<td>Sed</td>
-						<td>nisi</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</main>
-
-	<!-- ========== Javascript ========== -->
-	
-	<!-- jQuery / jQuery UI -->
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
-	
-	<!-- BValidator -->
-	<script type="text/javascript" src="/js/jquery.bvalidator-yc.js"></script>
-
-	<!-- Bootstrap JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	
-	<!-- Tablesorter -->
-	<script type="text/javascript" src="/js/jquery.tablesorter.min.js"></script>
-	
-	<!-- Site JS -->
-	<script type="text/javascript" src="/js/site.js"></script>
-</body></html>
