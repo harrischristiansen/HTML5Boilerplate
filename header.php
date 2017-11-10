@@ -13,7 +13,7 @@
 	<meta name="keywords" content="harris, christiansen, html5, boilerplate">
 
 	<!-- BValidator -->
-	<link href="/css/bvalidator.css" rel="stylesheet" type="text/css">
+	<link href="/css/plugins/bvalidator.css" rel="stylesheet" type="text/css">
 	
 	<!-- jQuery UI -->
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
